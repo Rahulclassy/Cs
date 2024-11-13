@@ -132,6 +132,85 @@ a= input("enter first string ;")
 b= input("enter second string ;")
 occurances(a,b)
 
+# PRACTICAL 8
+# WAP to create a list of the cubes of only the even integers appearing in the input list 
+#(may have elements of other types also) using the following: 
+#(a). 'for' loop 
+#(b).  list comprehension
+
+def cubes():
+ newlist= []
+ number = [1,2,3,4,5,6,"seven"]
+ for i in number:
+     if type(i)== int:
+         if i % 2 == 0:
+             newlist.append(i**3)
+         print(newlist)
+cubes()
+# PRACTICAL-9
+
+#PRACTICAL-10
+
+
+
+# PRACTICAL-11
+#write a function that prints a dictionary where the keys are numbers
+#between 1 and 5 and the values are cubes of the keys.
+
+def cubes():
+ dict={}
+ for i in range (1,6):
+    dict[i]=i**3
+ print(dict)
+cubes()
+
+# PRACTICAL-12
+#) Consider a tuple t1=(1,2,5,7,9,2,4,6,8,10).WAP to perform following
+#oprations:
+#(a.)Print half the values of the tuple in one line and other half in the other next
+#line.
+#(b.)Print another tuple whose values are even numbers in the given tuple.
+#(c.)concatenate a tuple t2 = (11,13,15) with t1.
+#(d.)Return maximmum and minimum value from this given tuple.
+
+#(a)
+t1 = (1,2,5,7,9,2,4,6,8,10)
+half_value=len(t1)//2
+first_half = t1[ :half_value]
+print("first_half",first_half)
+second_half = t1[half_value: ]
+print("second_half",second_half)
+
+#(b)
+t1 = (1,2,5,7,9,2,4,6,8,10)
+even_number= tuple(filter(lambda x: x%2==0,t1))
+print("tuple with even number",even_number)
+
+#(c)
+t1 = (1,2,5,7,9,2,4,6,8,10)
+t2 = (11,13,15)
+concatenation= (t1 + t2)
+print("tuple with concatenation ", concatenation)
+
+#(d)
+t1= (1, 2, 5, 7, 9, 2, 4, 6, 8, 10, 11, 13, 15)
+print("maximum value in t1 is ",max(t1))
+print("minimum value in t1 is ",min(t1))
+
+# PRACTICAL -13
+#Wap to accept a name from a user. Raise and handle appropriate
+#exception(s) if the text entered by the user contains digits and/or special
+#characters.
+
+name = input("enter a name ")
+try:
+ if name.isalpha():
+     print("This is correct Name")
+ else:
+    raise Exception(" There is NameError")
+except Exception as e:
+ print(e)
+
 
 
           
